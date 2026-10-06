@@ -1,5 +1,7 @@
 # Let's Rent
 
+![Let's rent banner](docs/lets-rent.png)
+
 This is the Let's Rent plugin for OctoberCMS by [InIT.biz](https://init.biz).
 
 ## Introduction
@@ -37,6 +39,8 @@ In every rental office there have to define such constants:
 
 1. minimum period for the rental (whether it is 15 minutes, 1 hour, 1 day and so on),
 1. buffer for all rentals.
+
+![Time spans settings](docs/settings-time-spans.png)
 
 > For example, when we have a car rental, we would like to have a minimum period of one day and for example 2 hours of buffer between rentals to prepare cars.
 
@@ -175,6 +179,8 @@ This will make it possible to use `enabled()` scope on the model and automatical
 
 Categories are meant to be used by the plugins extending Let's rent.
 
+![Category list](docs/category-list.png)
+
 They are created just for the convenience of the rental office employees.
 
 ## Components
@@ -209,6 +215,8 @@ The component will render a typical rental form with such parameters:
 Locations will be seeded from the settings and if they are extra paid than the option will have this specified in the parenthesis.
 
 Start and end time will be set to the closest possible time by default and it will be treated as the minimum date in the frontend. If the page remembers the state of the inputs and the date is too early, the alert will be returned:
+
+![Start date alert](docs/start-date-alert.png)
 
 ### `CreateOrder`
 
@@ -262,6 +270,8 @@ The `onCashOnDelivery` handler ensures if the user can modify the order and if s
 
 You can specify the working hours for every weekday.
 
+![Working hours](docs/settings-working-hours.png)
+
 What is more, you can forbid rentals in non-working hours or if you like enable but add the specified amount of money to the order automatically.
 
 ### Locations
@@ -272,9 +282,13 @@ You can manage pick up locations from the settings and specify the amount of mon
 
 Paid locations will render the amount in the rent form and backend controller options.
 
+![Locations](docs/settings-locations.png)
+
 ## Time spans
 
 The settings are meant to be set before making the app production-ready. They refer to the order price described at the beginning of the document.
+
+![Time spans settings](docs/settings-time-spans.png)
 
 ### Buffer before creating order
 
